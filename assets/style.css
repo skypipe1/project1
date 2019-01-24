@@ -35,5 +35,14 @@ body {
     padding-top: 30px;
     margin-bottom: 300px;
   }
+
+  .bg-light{
+      color: lightcoral;
+      
+  }
+  .form-inline{
+      margin-right:77%;
+  }
+
   
  
