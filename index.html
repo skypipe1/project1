@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style type="text/css">
+        button,div,form, input {
+          margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container-fluid">
+    <div class="row header">
+        <!-- List of Button List -->
+        <div class="col-lg-12">
+            <div>
+                <div>
+                    <h3>Recipe Search</h3>
+                </div>
 
+                <div class="col-lg-4">
+                    <form>
+                        <button id="recipeSearch" class="btn btn-md btn-danger" type="submit" 
+                                value="Which animal do you want to see?">Recipe Search</button>
+                        <input type="text" id="typeAnimal"><br>
+                    </form>
+                </div>
+
+        <!-- Animal Buttons will be lined up here -->
+                <div class="panel-body buttonList">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<hr>
+<hr>
+<div class="row">
+    <!-- GIFs will be pop up here -->
+    <div class="col-lg-8" style="width:300px">
+        <div id="images"></div>           
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="assets/javascript/GifTastic.js"></script>
+</body>
+</html>
