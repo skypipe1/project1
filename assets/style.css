@@ -1,8 +1,11 @@
-/* BASIC STYLES */
-body {
-    margin: 0;
-    padding: 0;
+
+  body {
+    background: lightslategray;
     font-family: 'Roboto', sans-serif;
+  }
+
+  .bd{
+    background: rgba(132, 199, 115, 0.774);
   }
   
   /* GOOGLE AREA */
@@ -36,13 +39,64 @@ body {
     margin-bottom: 300px;
   }
 
-  .bg-light{
-      color: lightcoral;
+.bg-light{
+  color: lightcoral;
       
-  }
-  .form-inline{
-      margin-right:77%;
-  }
+}
+.form-inline{
+    margin-right:12%;
+    margin-top: 1%;
+}
+
+.searchButton{
+  width: 120px;
+  height: 3.75%;
+}
+
+.hvr-pulse-shrink{
+  position: relative;
+  width: 120px;
+  height: 4%;
+  top: -2px;
+  
+}
+.hvr-pulse-shrink:hover{
+  background: #65ba41
+}
+
+.logo1{
+  width:45%;
+  height:auto;
+
+}
+
+.navbar-light{
+  background: #65ba41
+}
+
+
+/* iphone678x  */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    .bd{
+      background: lightgray;
+    }
+    #form-search { 
+      width: 50%;
+      height: 4%;
+      line-height: 32px;
+      padding: 20px 10px;
+    }
+
+    .logo{
+      width:80%;
+      height:auto;
+    }
+}
+
 
   
  
