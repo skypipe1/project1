@@ -14,7 +14,7 @@ $(document).ready(function () {
     var database = firebase.database();
 
     ////////////// Variables for the onClick event
-    
+
 
     $("#add-food").on("click", function () {
         event.preventDefault();
@@ -50,71 +50,58 @@ function food2fork(foodStuff) {
     // 5b7ba731be534597e05f61a79a345596
 
     // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
-    var title = foodStuff;
-    var queryURL = "https://www.food2fork.com/api/search?key=5b7ba731be534597e05f61a79a345596&q=" + title;
+    var title = encodeURIComponent(foodStuff);
+    var queryURL = "https://www.food2fork.com/api/search?key=4791db24d21a9301c80389743b916b8e&q=" + title;
     console.log(queryURL);
-    // $.ajax({
-    //     url: queryURL,
-    //     method: "GET"
-    // }).then(function (response) {
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
 
-    //     var res = JSON.parse(response);
-    //     var data = res.recipes;
-    //     for (var i = 0; i < data.length; i++) {
-    //         //    trying to get title to display as a hyperlink still 1/26/18
-    //         console.log(data);
-    //         var recipeLink = data[i].f2f_url;
-    //         var newLink = $("<a>");
-    //         newLink.attr("href", recipeLink);
-    //         newLink.attr("target","_blank");
+        var res = JSON.parse(response);
+        var data = res.recipes;
+        $("#recipes").empty();
+        for (var i = 0; i < data.length; i++) {
+            //    trying to get title to display as a hyperlink still 1/26/18
+            console.log(data);
+            var recipeLink = data[i].f2f_url;
+            var newLink = $("<a>");
+            newLink.attr("href", recipeLink);
+            newLink.attr("target", "_blank");
 
-    //         // newTitle.text(data[i].title)
-    //         var recipeTitle = data[i].title;
-    //         var newTitle = $("<h3>").html(recipeTitle);
+            // newTitle.text(data[i].title)
+            var recipeTitle = data[i].title;
+            var newTitle = $("<h3>").html(recipeTitle);
 
-    //         newLink.text(data[i].source_url)
-    //         $("#recipes").append(newTitle)
-    //         $("#recipes").append(newLink)
+            newLink.text(data[i].source_url)
+            $("#recipes").append(newTitle)
+            $("#recipes").append(newLink)
 
-    //     }
-    // });
+        }
+    });
 
+    
+    var queryURL = "http://api.yummly.com/v1/api/recipes?_app_id=338f014d&_app_key=b887c8c8767616c0a35ad4bdd051f009&q=" + title + "&maxResult=10&start=10"
+    console.log(queryURL)
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        var data1 = response.matches;
+        $("#nutrients").empty();
+        for (var i = 0; i < data1.length; i++) {
+
+            console.log(data1[i].imageUrlsBySize[90]);
+            var imageTitle = data1[i].imageUrlsBySize[90];
+            var newImage = $("<img>");
+            newImage.attr("src", imageTitle);
+            newImage.addClass('animated lightSpeedIn');
+            $("#nutrients").append(newImage);
+        }
+
+
+
+    });
 };
 
 
-  // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
-//   var nutrient = "chicken";
-//   var queryURL = "https://api.edamam.com/api/nutrition-data?app_id=6cd68ac6&app_key=a4a3a7428895a85fb63293d28563589e&ingr=" + nutrient;
-
-
-//   $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   }).then(function(response) {
-//     console.log(response);
-//     console.log(response.Runtime);
-//     $("#nutrients").append(response);
-
-//   });
-
-
-   // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
-//    var title = "onion";
-//    var queryURL = "https://www.food2fork.com/api/search?key=4791db24d21a9301c80389743b916b8e&q=" + title;
-
-//    $.ajax({
-//      url: queryURL,
-//      method: "GET"
-//    }).then(function(response) {
-//      var res = JSON.parse(response);
-//      for (var i = 0; i < res.recipes.length; i++){
-//         var newTitle = $("<h3>").attr("#recipes", newTitle);
-//         newTitle.text(res.recipes[i].title);
-//         $("#recipes").append(newTitle);
-//         console.log(res.recipes);
-
-//      }
-
-
-
-//    });
