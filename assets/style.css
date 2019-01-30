@@ -5,7 +5,25 @@
   }
 
   .bd{
-    background: rgba(132, 199, 115, 0.774);
+    
+    color: white;
+    font: helvetica;
+    
+  }
+  .foodImg{
+    width: 200px;
+    height: 200px;
+    margin: 10px ;
+  }
+
+  /* unvisited link */
+  a:link {
+  color: green;
+  }
+
+  /* visited link */
+  a:visited {
+  color: purple;
   }
   
   /* GOOGLE AREA */
@@ -51,6 +69,18 @@
 .searchButton{
   width: 120px;
   height: 3.75%;
+}
+
+.wrapper {
+  display:grid;
+  background: rgba(132, 199, 115, 0.774);
+  grid-template-columns: 20% 45% 35%;
+  grid-column-gap: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  word-wrap: normal;
 }
 
 .hvr-pulse-shrink{

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 
-<body>
+<body class="bd">
     <header>
         <nav class="navbar navbar-light bg-light justify-content-between">
             <a hrefclass="navbar-brand"><img class="logo1" src="assets/images/greenboogle.png" alt=" " /></a>
@@ -28,18 +28,29 @@
 
 
 
-
-    <div class="container-fluid">
+<div class="wrapper">
+    <div class="container-fluid-1">
         <div class="row">
-            <div id="recentSearch" class="col-2"><h3>Recent Search History</h3>
+            <div id="recentSearch" ><h3>Recent Search History</h3>
                 <ol id="add-history">
 
                 </ol>
             </div>
-            <div id="recipes" class="col-6"></div>
-            <div id="nutrients" class="col-4"></div>
         </div>
     </div>
+
+    <div class="container-fluid-2">
+        <div class="row">
+            <div id="recipes" ></div>
+        </div>
+    </div>
+
+    <div class="container-fluid-3">
+        <div class="row">
+            <div id="nutrients" ></div>
+        </div>
+    </div>
+</div>
 
 
     <script src="assets/main.js"></script>
