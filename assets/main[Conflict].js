@@ -32,19 +32,15 @@ $(document).ready(function () {
 
     /////////// Appending on Dashboard
     database.ref().on("child_added", function (childSnapshot) {
-        console.log(childSnapshot.val().name)
-        $("#add-history").append(`<button class="btn side-btn"> ${childSnapshot.val().name} </button>`);
+        $("#add-history").append("<button class=btn1>"  + childSnapshot.val().name);
     });
 
-    
+//     $('.btn1').click(function() {
+//         alert($(this).html());
+//    });
 
-    $(document).on('click', '.side-btn', function(){
-        var title = $(this).text();
-        console.log(title);
-        $('input#food-name').val(title);
-        food2fork(title);
-
-
+    $(".").on('click',function(){
+        alert("hey");
     });
 
     // //////   Writing on the Dashboard
