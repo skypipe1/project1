@@ -2,12 +2,14 @@
   body {
     background: lightslategray;
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(132, 199, 115);
   }
 
   .bd{
     
     color: white;
-    font: helvetica;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(132, 199, 115);
     
   }
   .foodImg{
@@ -77,7 +79,8 @@
   grid-template-columns: 20% 45% 35%;
   grid-column-gap: 1em;
   overflow: hidden;
-  
+  padding-left: 5px;
+  background-color: rgba(132, 199, 115, 0.774);
 }
 
 .hvr-pulse-shrink{
@@ -88,7 +91,7 @@
   
 }
 .hvr-pulse-shrink:hover{
-  background: #65ba41
+  background: rgba(132, 199, 115, 0.774);
 }
 
 .logo1{
@@ -98,7 +101,7 @@
 }
 
 .navbar-light{
-  background: #65ba41
+  background: rgba(132, 199, 115, 0.774);
 }
 
 
