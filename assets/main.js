@@ -63,7 +63,7 @@ function food2fork(foodStuff) {
     
     // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
     var title = encodeURIComponent(foodStuff);
-    var queryURL = "https://www.food2fork.com/api/search?key=66be10d788d4cef25e9ab2238c72f9ca&q=" + title;
+    var queryURL = "https://www.food2fork.com/api/search?key=5b7ba731be534597e05f61a79a345596&q=" + title;
     console.log(queryURL);
     $.ajax({
         url: queryURL,
