@@ -104,6 +104,15 @@
   background: rgba(132, 199, 115, 0.774);
 }
 
+.container-fluid-1{
+    
+}
+.container-fluid-2{
+
+}
+.container-fluid-3{
+ 
+}
 
 /* iphone678x  */
 @media only screen 
@@ -111,20 +120,7 @@
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
 
-    .bd{
-      background: lightgray;
-    }
-    #form-search { 
-      width: 50%;
-      height: 4%;
-      line-height: 32px;
-      padding: 20px 10px;
-    }
-
-    .logo{
-      width:80%;
-      height:auto;
-    }
+ 
 }
 
 
