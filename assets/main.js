@@ -45,10 +45,10 @@ $(document).ready(function () {
 function food2fork(foodStuff) {
     // lee api key for food 2 fork api
     // 4791db24d21a9301c80389743b916b8e
-
+    
     // skylar's api key for food 2 fork api
     // 5b7ba731be534597e05f61a79a345596
-
+    
     // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
     var title = encodeURIComponent(foodStuff);
     var queryURL = "https://www.food2fork.com/api/search?key=66be10d788d4cef25e9ab2238c72f9ca&q=" + title;
@@ -57,7 +57,6 @@ function food2fork(foodStuff) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-
         var res = JSON.parse(response);
         var data = res.recipes;
         $("#recipes").empty();
@@ -95,7 +94,7 @@ function food2fork(foodStuff) {
             var imageTitle = data1[i].imageUrlsBySize[90];
             var newImage = $("<img>");
             newImage.attr("src", imageTitle);
-            newImage.addClass('animated lightSpeedIn');
+            newImage.addClass('animated lightSpeedIn foodImg');
             $("#nutrients").append(newImage);
         }
 
