@@ -32,19 +32,15 @@ $(document).ready(function () {
 
     /////////// Appending on Dashboard
     database.ref().on("child_added", function (childSnapshot) {
-        console.log(childSnapshot.val().name)
-        $("#add-history").append(`<button class="btn side-btn"> ${childSnapshot.val().name} </button>`);
+        $("#add-history").append("<button class=btn1>"  + childSnapshot.val().name);
     });
 
-    
+//     $('.btn1').click(function() {
+//         alert($(this).html());
+//    });
 
-    $(document).on('click', '.side-btn', function(){
-        var title = $(this).text();
-        console.log(title);
-        $('input#food-name').val(title);
-        food2fork(title);
-
-
+    $(".").on('click',function(){
+        alert("hey");
     });
 
     // //////   Writing on the Dashboard
@@ -57,10 +53,10 @@ $(document).ready(function () {
 function food2fork(foodStuff) {
     // lee api key for food 2 fork api
     // 4791db24d21a9301c80389743b916b8e
-    
+
     // skylar's api key for food 2 fork api
     // 5b7ba731be534597e05f61a79a345596
-    
+
     // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
     var title = encodeURIComponent(foodStuff);
     var queryURL = "https://www.food2fork.com/api/search?key=66be10d788d4cef25e9ab2238c72f9ca&q=" + title;
@@ -69,6 +65,7 @@ function food2fork(foodStuff) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
+
         var res = JSON.parse(response);
         var data = res.recipes;
         $("#recipes").empty();
@@ -106,7 +103,7 @@ function food2fork(foodStuff) {
             var imageTitle = data1[i].imageUrlsBySize[90];
             var newImage = $("<img>");
             newImage.attr("src", imageTitle);
-            newImage.addClass('animated lightSpeedIn foodImg');
+            newImage.addClass('animated lightSpeedIn');
             $("#nutrients").append(newImage);
         }
 
