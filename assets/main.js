@@ -92,7 +92,7 @@ function food2fork(foodStuff) {
     });
 
     
-    var queryURL = "http://api.yummly.com/v1/api/recipes?_app_id=338f014d&_app_key=b887c8c8767616c0a35ad4bdd051f009&q=" + title + "&maxResult=10&start=10"
+    var queryURL = "https://api.yummly.com/v1/api/recipes?_app_id=338f014d&_app_key=b887c8c8767616c0a35ad4bdd051f009&q=" + title + "&maxResult=10&start=10"
     console.log(queryURL)
     $.ajax({
         url: queryURL,
